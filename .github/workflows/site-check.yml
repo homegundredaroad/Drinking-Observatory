@@ -1,0 +1,22 @@
+name: Site check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check pages, links and anchors (no network)
+        run: python3 scripts/check_site.py
+      - name: Check site script syntax
+        run: node --check assets/site.js
+      - name: Check health manifest is valid JSON
+        run: python3 -m json.tool scc-health.json > /dev/null

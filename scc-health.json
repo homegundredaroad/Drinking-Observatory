@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "project": "Drinking Observatory",
+  "status": "operational",
+  "generated_at": "2026-11-26T08:30:00Z",
+  "tests_passed": null,
+  "tests_failed": null,
+  "data_current": null,
+  "public_build_valid": true,
+  "provenance_valid": null,
+  "output_generated_at": "2026-08-31T16:50:40Z",
+  "evidence": {
+    "source_count": null,
+    "record_count": null,
+    "coverage_percent": null,
+    "manifest_sha256": null
+  },
+  "notes": "Static two-page site. public_build_valid reflects the Site check workflow (pages parse, local links and anchors resolve, site.js syntax). Story records are demonstration only; live hosting is not checked here."
+}
